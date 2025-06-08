@@ -1,0 +1,133 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  text-transform: none;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #000;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+
+nav a.active {
+  border-bottom: 1px solid #fff;
+}
+
+.building-card {
+  background-color: #000;
+  padding: 3rem 1rem;
+  margin: 0 auto 3rem;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.building-card:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.building-card img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+  border: none;
+}
+
+.building-votes {
+  margin: 1rem 0;
+}
+
+button {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  margin: 0.3rem;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.building-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.add-form {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.add-form h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.add-form input {
+  background: none;
+  border: 1px solid #666;
+  padding: 0.7rem;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.add-form button {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+  text-transform: uppercase;
+}
+
+.add-form button:hover {
+  background-color: #fff;
+  color: #000;
+}
