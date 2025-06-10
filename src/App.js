@@ -4,8 +4,7 @@ import { useState } from "react";
 import { buildings as initialBuildings } from "./data/buildingData";
 
 import Navbar from "./components/Navbar";
-import Hot from "./pages/Hot";
-import Regular from "./pages/Regular";
+import BuildingPages from "./pages/BuildingPages";
 import AddBuilding from "./pages/AddBuilding";
 
 function App() {
@@ -44,7 +43,11 @@ function App() {
         <Route
           path="/regular"
           element={
-            <Regular buildings={buildings} onVote={handleVote} onStar={handleStar}
+            <BuildingPages
+              buildings={buildings}
+              onVote={handleVote}
+              onStar={handleStar}
+              type="regular"
             />
           }
         />
@@ -52,16 +55,26 @@ function App() {
         <Route
           path="/hot"
           element={
-            <Hot buildings={buildings} onVote={handleVote} onStar={handleStar}
+            <BuildingPages
+              buildings={buildings}
+              onVote={handleVote}
+              onStar={handleStar}
+              type="hot"
             />
           }
         />
 
         <Route path="/add" element={<AddBuilding onAdd={handleAdd} />} />
 
-        <Route path="*"
+        <Route
+          path="*"
           element={
-            <Regular buildings={buildings} onVote={handleVote} onStar={handleStar} />
+            <BuildingPages
+              buildings={buildings}
+              onVote={handleVote}
+              onStar={handleStar}
+              type="regular"
+            />
           }
         />
       </Routes>
