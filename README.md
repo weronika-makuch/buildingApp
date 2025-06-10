@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Brutalist Buildings App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Brutalist Buildings App to minimalistyczna aplikacja frontendowa stworzona w React, której celem jest prezentowanie budynków w stylu brutalizmu. Aplikacja pozwala użytkownikom przeglądać obiekty, oceniać je, oznaczać jako ulubione i dodawać własne propozycje.
 
-## Available Scripts
+## Opis działania
 
-In the project directory, you can run:
+Aplikacja umożliwia:
 
-### `npm start`
+- Wyświetlanie listy brutalistycznych budynków z nazwą, lokalizacją oraz obrazem.
+- Głosowanie na każdy budynek (łapka w górę lub w dół).
+- Oznaczanie wybranych budynków jako ulubione (gwiazdką).
+- Dodawanie nowego budynku do listy przez użytkownika, z formularzem zawierającym nazwę, lokalizację i link do zdjęcia.
+- Automatyczny podział budynków na kategorie w zależności od liczby głosów:
+  - **Hot** – budynki o wysokiej ocenie (różnica upvotes − downvotes większa niż 5)
+  - **Regular** – pozostałe budynki
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Jak uruchomić projekt?
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Sklonuj repozytorium lub pobierz pliki projektu.
+2. Otwórz terminal i przejdź do folderu projektu:
+cd meme-app
 
-### `npm test`
+3. Zainstaluj wymagane pakiety:
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Uruchom aplikację lokalnie:
+npm start
 
-### `npm run build`
+5. Otwórz przeglądarkę i przejdź do:
+http://localhost:3000
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Struktura katalogów
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+src/
+├── App.js # Główny komponent i konfiguracja routingu
+├── components/ # Komponenty: Building, BuildingList, Navbar
+├── pages/ # Widoki: Hot.js, Regular.js, AddBuilding.js
+├── data/buildingData.js # Początkowa baza 10 budynków (Unsplash/Wikipedia)
+├── App.css # Stylizacja: ciemna
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Styl i wygląd
 
-### `npm run eject`
+Projekt wykorzystuje ręczne stylowanie w pliku CSS i oddaje charakter brutalizmu:
+- surowe tło (ciemne),
+- bez ramek i ozdobników,
+- duża, czytelna typografia,
+- interfejs oparty na prostocie i funkcjonalności.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Dodatkowe informacje
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Obrazy pochodzą z otwartych źródeł.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Autor
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Weronika Makuch
