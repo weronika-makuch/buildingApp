@@ -52,12 +52,21 @@ nav a.active {
 }
 
 .building-card img {
-  width: 100%;
-  max-width: 1000px;
+  width: 80%;
+  max-width: 800px;
   height: auto;
+  max-height: 600px;
   display: block;
   margin: 1.5rem auto;
+  padding: 0 2rem;
   border: none;
+  box-sizing: border-box;
+  object-fit: contain;
+}
+
+.building-card:last-child {
+  margin-bottom: 120px;
+  padding-bottom: 0;
 }
 
 .building-votes {

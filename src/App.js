@@ -6,6 +6,7 @@ import { buildings as initialBuildings } from "./data/buildingData";
 import Navbar from "./components/Navbar";
 import BuildingPages from "./pages/BuildingPages";
 import AddBuilding from "./pages/AddBuilding";
+import ErrorPage from "./components/ErrorPage";
 
 function App() {
   const [buildings, setBuildings] = useState(initialBuildings);
@@ -66,17 +67,7 @@ function App() {
 
         <Route path="/add" element={<AddBuilding onAdd={handleAdd} />} />
 
-        <Route
-          path="*"
-          element={
-            <BuildingPages
-              buildings={buildings}
-              onVote={handleVote}
-              onStar={handleStar}
-              type="regular"
-            />
-          }
-        />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Router>
   );

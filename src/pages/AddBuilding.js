@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const AddBuilding = ({ onAdd }) => {
     const [title, setTitle] = useState("");
@@ -8,7 +9,7 @@ const AddBuilding = ({ onAdd }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const newBuilding = {
-            id: Date.now(),
+            id: uuidv4(),
             title,
             location,
             img,
